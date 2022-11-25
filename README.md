@@ -1,5 +1,5 @@
 # slack-hook2
-[![crates.io](https://img.shields.io/crates/v/slack-hook.svg)](https://crates.io/crates/slack-hook)
+[![crates.io](https://img.shields.io/crates/v/slack-hook.svg)](https://crates.io/crates/slack-hook2)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE-MIT)
 [![Apache licensed](https://img.shields.io/badge/license-Apache-blue.svg)](./LICENSE-APACHE)
 
@@ -11,13 +11,15 @@ Upgrading? See the [CHANGELOG](./CHANGELOG.md).
 
 Requires rust 1.35 or newer.
 
+**NOTE**: Slack webhooks are [deprecated](https://api.slack.com/legacy/custom-integrations). Use this crate only for legacy codebases.
+
 # Usage
 
 Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-slack-hook2 = "0.10"
+slack-hook2 = "0.10.1"
 ```
 
 Add the crate to your existing project:
