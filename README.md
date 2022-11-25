@@ -27,7 +27,8 @@ Add the crate to your existing project:
 ```rust,no_run
 use slack_hook2::{Slack, PayloadBuilder};
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let slack = Slack::new("https://hooks.slack.com/services/abc/123/45z").unwrap();
     let p = PayloadBuilder::new()
       .text("test message")
@@ -37,7 +38,7 @@ fn main() {
       .build()
       .unwrap();
 
-    let res = slack.send(&p);
+    let res = slack.send(&p).await;
     match res {
         Ok(()) => println!("ok"),
         Err(x) => println!("ERR: {:?}",x)
